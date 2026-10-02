@@ -1,0 +1,4 @@
+.DS_Store
+
+# ARM toolchain (~1 GB) — not part of the source, fetch separately
+tools/toolchain/

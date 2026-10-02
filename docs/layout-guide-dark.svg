@@ -1,0 +1,650 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3200" height="1730" viewBox="0 0 3200 1730">
+<title>Omakeys starter keymap layout guide</title>
+<desc>Five-layer keymap guide for the Omakeys (LoremIpsum36) keyboard.</desc>
+<defs>
+<linearGradient id="capg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#D7E0EC"/></linearGradient>
+<clipPath id="canvas"><rect x="0" y="0" width="3200" height="1730"/></clipPath>
+</defs>
+<rect class="bg" width="3200" height="1730" fill="#0B1220"/>
+<g clip-path="url(#canvas)">
+<path class="contour" d="M 799.21 330 C 796.1 359.85 782.01 390.59 765.75 414.15 C 749.49 437.71 725.92 459.37 701.63 471.38 C 677.33 483.4 646.49 487.48 620 486.24 C 593.51 485 564.69 477.26 542.68 463.93 C 520.67 450.59 499.96 428.56 487.96 406.23 C 475.95 383.91 470.36 355.24 470.65 330 C 470.95 304.76 476.76 275.44 489.73 254.79 C 502.69 234.13 526.74 217.33 548.45 206.08 C 570.17 194.83 593.87 191.24 620 187.29 C 646.13 183.34 677.82 174.42 705.23 182.38 C 732.63 190.35 768.75 210.47 784.42 235.07 C 800.08 259.68 802.32 300.15 799.21 330 Z" fill="none" stroke="#152741" stroke-width="2" opacity="0.28"/>
+<path class="contour" d="M 944.82 330 C 939.18 384.1 913.65 439.81 884.17 482.52 C 854.69 525.23 811.98 564.48 767.95 586.25 C 723.92 608.03 668.02 615.43 620 613.18 C 571.98 610.93 519.74 596.91 479.85 572.74 C 439.97 548.57 402.43 508.63 380.67 468.18 C 358.92 427.72 348.78 375.75 349.31 330 C 349.84 284.25 360.38 231.11 383.88 193.67 C 407.38 156.24 450.97 125.78 490.32 105.39 C 529.68 85 572.64 78.49 620 71.33 C 667.36 64.18 724.8 48.01 774.47 62.45 C 824.14 76.88 889.62 113.35 918.01 157.94 C 946.4 202.54 950.46 275.9 944.82 330 Z" fill="none" stroke="#152741" stroke-width="2" opacity="0.33"/>
+<path class="contour" d="M 1124.04 330 C 1115.29 413.94 1075.67 500.4 1029.92 566.67 C 984.18 632.94 917.89 693.84 849.57 727.63 C 781.25 761.43 694.51 772.91 620 769.42 C 545.49 765.92 464.43 744.17 402.53 706.66 C 340.64 669.16 282.39 607.19 248.63 544.41 C 214.87 481.63 199.13 400.99 199.96 330 C 200.79 259.01 217.13 176.55 253.6 118.46 C 290.07 60.37 357.71 13.11 418.78 -18.53 C 479.84 -50.17 546.51 -60.27 620 -71.38 C 693.49 -82.48 782.63 -107.57 859.7 -85.17 C 936.77 -62.77 1038.37 -6.18 1082.43 63.02 C 1126.48 132.21 1132.79 246.06 1124.04 330 Z" fill="none" stroke="#152741" stroke-width="2" opacity="0.38"/>
+<path class="contour" d="M 1336.85 330 C 1324.41 449.38 1268.06 572.34 1203 666.6 C 1137.94 760.85 1043.67 847.46 946.51 895.52 C 849.34 943.58 725.97 959.92 620 954.95 C 514.03 949.98 398.74 919.04 310.71 865.7 C 222.68 812.37 139.85 724.22 91.83 634.94 C 43.81 545.66 21.44 430.97 22.62 330 C 23.79 229.03 47.04 111.76 98.9 29.14 C 150.77 -53.47 246.97 -120.69 333.82 -165.68 C 420.67 -210.68 515.49 -225.05 620 -240.85 C 724.51 -256.64 851.29 -292.32 960.9 -260.46 C 1070.52 -228.61 1215.02 -148.12 1277.68 -49.71 C 1340.33 48.7 1349.3 210.62 1336.85 330 Z" fill="none" stroke="#152741" stroke-width="2" opacity="0.43"/>
+<path class="contour" d="M 1605.67 330 C 1588.56 494.15 1511.08 663.22 1421.63 792.82 C 1332.17 922.42 1202.55 1041.51 1068.94 1107.59 C 935.34 1173.68 765.7 1196.14 620 1189.31 C 474.3 1182.48 315.77 1139.93 194.73 1066.59 C 73.69 993.25 -40.21 872.06 -106.23 749.29 C -172.26 626.53 -203.03 468.83 -201.4 330 C -199.78 191.17 -167.83 29.92 -96.51 -83.68 C -25.19 -197.27 107.08 -289.69 226.5 -351.57 C 345.92 -413.44 476.29 -433.2 620 -454.92 C 763.71 -476.64 938.03 -525.69 1088.74 -481.89 C 1239.46 -438.09 1438.15 -327.41 1524.3 -192.1 C 1610.46 -56.78 1622.79 165.85 1605.67 330 Z" fill="none" stroke="#152741" stroke-width="2" opacity="0.48"/>
+<path class="contour" d="M 1919.3 330 C 1896.74 546.38 1794.61 769.24 1676.69 940.08 C 1558.77 1110.91 1387.91 1267.9 1211.79 1355.01 C 1035.68 1442.12 812.06 1471.74 620 1462.73 C 427.94 1453.72 218.97 1397.63 59.42 1300.96 C -100.13 1204.29 -250.28 1044.53 -337.31 882.7 C -424.34 720.88 -464.9 513 -462.76 330 C -460.62 147 -418.5 -65.56 -324.49 -215.3 C -230.48 -365.04 -56.12 -486.87 101.29 -568.43 C 258.71 -649.99 430.57 -676.03 620 -704.66 C 809.43 -733.29 1039.22 -797.96 1237.89 -740.22 C 1436.56 -682.48 1698.47 -536.59 1812.04 -358.22 C 1925.6 -179.85 1941.85 113.62 1919.3 330 Z" fill="none" stroke="#152741" stroke-width="2" opacity="0.53"/>
+<path class="contour" d="M 2943.06 1420 C 2947.08 1452.68 2938.95 1495.92 2921.91 1525.02 C 2904.87 1554.13 2871.14 1582.4 2840.82 1594.62 C 2810.5 1606.85 2770.46 1603.8 2740 1598.36 C 2709.54 1592.91 2683.47 1576.99 2658.05 1561.94 C 2632.63 1546.89 2603.64 1531.72 2587.48 1508.06 C 2571.31 1484.4 2559.19 1448.28 2561.05 1420 C 2562.91 1391.72 2582.44 1361.98 2598.64 1338.39 C 2614.85 1314.8 2634.73 1293.22 2658.29 1278.47 C 2681.85 1263.72 2712.3 1250.71 2740 1249.9 C 2767.7 1249.09 2798.22 1260.45 2824.51 1273.62 C 2850.8 1286.79 2877.99 1304.53 2897.74 1328.93 C 2917.5 1353.32 2939.03 1387.32 2943.06 1420 Z" fill="none" stroke="#152741" stroke-width="2" opacity="0.28"/>
+<path class="contour" d="M 3112.27 1420 C 3119.65 1479.92 3104.74 1559.19 3073.5 1612.54 C 3042.26 1665.9 2980.42 1717.74 2924.83 1740.14 C 2869.25 1762.55 2795.85 1756.98 2740 1746.99 C 2684.15 1737 2636.36 1707.82 2589.76 1680.23 C 2543.15 1652.64 2490.01 1624.81 2460.37 1581.44 C 2430.74 1538.07 2408.51 1471.84 2411.92 1420 C 2415.33 1368.16 2451.13 1313.62 2480.85 1270.38 C 2510.56 1227.13 2547 1187.57 2590.19 1160.53 C 2633.39 1133.49 2689.21 1109.63 2740 1108.15 C 2790.79 1106.66 2846.74 1127.48 2894.94 1151.63 C 2943.14 1175.78 2992.98 1208.3 3029.2 1253.03 C 3065.42 1297.76 3104.88 1360.08 3112.27 1420 Z" fill="none" stroke="#152741" stroke-width="2" opacity="0.33"/>
+<path class="contour" d="M 3337.88 1420 C 3349.74 1516.23 3325.79 1643.54 3275.62 1729.24 C 3225.44 1814.93 3126.12 1898.18 3036.86 1934.17 C 2947.59 1970.16 2829.69 1961.2 2740 1945.16 C 2650.31 1929.13 2573.55 1882.25 2498.7 1837.94 C 2423.85 1793.63 2338.51 1748.94 2290.9 1679.29 C 2243.3 1609.63 2207.6 1503.26 2213.08 1420 C 2218.56 1336.74 2276.06 1249.15 2323.78 1179.7 C 2371.5 1110.24 2430.03 1046.7 2499.4 1003.27 C 2568.77 959.85 2658.43 921.52 2740 919.14 C 2821.57 916.76 2911.44 950.2 2988.85 988.98 C 3066.26 1027.77 3146.3 1080 3204.47 1151.84 C 3262.64 1223.67 3326.03 1323.77 3337.88 1420 Z" fill="none" stroke="#152741" stroke-width="2" opacity="0.38"/>
+<path class="contour" d="M 3619.91 1420 C 3637.36 1561.63 3602.1 1748.99 3528.27 1875.11 C 3454.43 2001.22 3308.26 2123.74 3176.88 2176.7 C 3045.5 2229.66 2872 2216.49 2740 2192.88 C 2608 2169.28 2495.04 2100.3 2384.88 2035.08 C 2274.73 1969.87 2149.13 1904.1 2079.07 1801.59 C 2009.01 1699.08 1956.47 1542.54 1964.54 1420 C 1972.6 1297.46 2057.22 1168.56 2127.45 1066.35 C 2197.68 964.13 2283.82 870.61 2385.91 806.7 C 2488 742.79 2619.95 686.39 2740 682.89 C 2860.05 679.38 2992.3 728.6 3106.23 785.68 C 3220.15 842.75 3337.95 919.63 3423.56 1025.35 C 3509.17 1131.07 3602.45 1278.37 3619.91 1420 Z" fill="none" stroke="#152741" stroke-width="2" opacity="0.43"/>
+<path class="contour" d="M 3958.33 1420 C 3982.49 1616.1 3933.68 1875.52 3831.44 2050.15 C 3729.21 2224.77 3526.82 2394.41 3344.91 2467.74 C 3163.01 2541.07 2922.77 2522.83 2740 2490.15 C 2557.23 2457.47 2400.82 2361.95 2248.3 2271.65 C 2095.77 2181.35 1921.87 2090.3 1824.86 1948.35 C 1727.86 1806.41 1655.12 1589.67 1666.28 1420 C 1677.45 1250.33 1794.62 1071.85 1891.86 930.32 C 1989.1 788.79 2108.37 659.31 2249.72 570.82 C 2391.08 482.33 2573.77 404.24 2740 399.38 C 2906.23 394.53 3089.34 462.68 3247.08 541.7 C 3404.83 620.73 3567.93 727.17 3686.47 873.56 C 3805.01 1019.94 3934.17 1223.9 3958.33 1420 Z" fill="none" stroke="#152741" stroke-width="2" opacity="0.48"/>
+</g>
+<text x="72" y="250" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="168" font-weight="200" text-anchor="start" fill="none" stroke="#2EC4B6" stroke-width="2.5" letter-spacing="8">omakeys</text>
+<g class="panel" data-key="hero">
+<rect x="72" y="370" width="1544" height="599.65" rx="26" fill="#101B2D" stroke="#1E3350" stroke-width="2"/>
+<text x="72" y="354" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="26" font-weight="600" text-anchor="start" fill="#5AD9CB">QWERTY · base layer</text>
+<g class="cap"><rect x="126.3" y="429.33" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="126.3" y="424.3" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="182.96" y="480.96" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">q</text>
+<circle class="dual-dot" cx="219.47" cy="444.44" r="8.81" fill="#F2B84B"/></g>
+<g class="cap"><rect x="252.21" y="429.33" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="252.21" y="424.3" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="308.87" y="480.96" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">w</text></g>
+<g class="cap"><rect x="378.12" y="429.33" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="378.12" y="424.3" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="434.78" y="480.96" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">e</text></g>
+<g class="cap"><rect x="504.03" y="429.33" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="504.03" y="424.3" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="560.7" y="480.96" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">r</text></g>
+<g class="cap"><rect x="629.95" y="429.33" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="629.95" y="424.3" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="686.61" y="480.96" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">t</text></g>
+<g class="cap"><rect x="944.73" y="429.33" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="944.73" y="424.3" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1001.39" y="480.96" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">y</text></g>
+<g class="cap"><rect x="1070.64" y="429.33" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1070.64" y="424.3" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1127.3" y="480.96" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">u</text></g>
+<g class="cap"><rect x="1196.56" y="429.33" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1196.56" y="424.3" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1253.22" y="480.96" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">i</text></g>
+<g class="cap"><rect x="1322.47" y="429.33" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1322.47" y="424.3" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1379.13" y="480.96" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">o</text></g>
+<g class="cap"><rect x="1448.38" y="429.33" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1448.38" y="424.3" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1505.04" y="480.96" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">p</text></g>
+<g class="cap"><rect x="126.3" y="555.25" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="126.3" y="550.21" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="182.96" y="606.87" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">a</text></g>
+<g class="cap"><rect x="252.21" y="555.25" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="252.21" y="550.21" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="308.87" y="606.87" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">s</text></g>
+<g class="cap"><rect x="378.12" y="555.25" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="378.12" y="550.21" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="434.78" y="606.87" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">d</text></g>
+<g class="cap"><rect x="504.03" y="555.25" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="504.03" y="550.21" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="560.7" y="606.87" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">f</text></g>
+<g class="cap"><rect x="629.95" y="555.25" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="629.95" y="550.21" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="686.61" y="606.87" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">g</text></g>
+<g class="cap"><rect x="944.73" y="555.25" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="944.73" y="550.21" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1001.39" y="606.87" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">h</text></g>
+<g class="cap"><rect x="1070.64" y="555.25" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1070.64" y="550.21" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1127.3" y="606.87" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">j</text></g>
+<g class="cap"><rect x="1196.56" y="555.25" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1196.56" y="550.21" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1253.22" y="606.87" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">k</text></g>
+<g class="cap"><rect x="1322.47" y="555.25" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1322.47" y="550.21" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1379.13" y="606.87" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">l</text></g>
+<g class="cap"><rect x="1448.38" y="555.25" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1448.38" y="550.21" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1505.04" y="606.87" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">bksp</text></g>
+<g class="cap"><rect x="126.3" y="681.16" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="126.3" y="676.12" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="182.96" y="732.78" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">z</text></g>
+<g class="cap"><rect x="252.21" y="681.16" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="252.21" y="676.12" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="308.87" y="732.78" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">x</text></g>
+<g class="cap"><rect x="378.12" y="681.16" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="378.12" y="676.12" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="434.78" y="732.78" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">c</text></g>
+<g class="cap"><rect x="504.03" y="681.16" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="504.03" y="676.12" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="560.7" y="732.78" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">v</text></g>
+<g class="cap"><rect x="629.95" y="681.16" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="629.95" y="676.12" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="686.61" y="732.78" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">b</text></g>
+<g class="cap"><rect x="944.73" y="681.16" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="944.73" y="676.12" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1001.39" y="732.78" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">n</text></g>
+<g class="cap"><rect x="1070.64" y="681.16" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1070.64" y="676.12" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1127.3" y="732.78" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">m</text></g>
+<g class="cap"><rect x="1196.56" y="681.16" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1196.56" y="676.12" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1253.22" y="732.78" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">,</text></g>
+<g class="cap"><rect x="1322.47" y="681.16" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1322.47" y="676.12" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1379.13" y="732.78" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="50.37" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">.</text></g>
+<g class="cap"><rect x="1448.38" y="681.16" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1448.38" y="676.12" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1505.04" y="732.78" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="41.55" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">ent</text>
+<circle class="dual-dot" cx="1541.56" cy="696.27" r="8.81" fill="#F2B84B"/></g>
+<g class="cap"><rect x="378.12" y="802.03" width="113.32" height="113.32" rx="17.63" fill="#1F6F6B"/>
+<text x="434.78" y="858.7" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="41.55" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">cmd</text></g>
+<g class="cap"><rect x="504.03" y="807.07" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="504.03" y="802.03" width="113.32" height="113.32" rx="17.63" fill="#2EC4B6"/>
+<text x="560.7" y="858.7" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="41.55" font-weight="600" text-anchor="middle" fill="#062722" dominant-baseline="central">SYM</text></g>
+<g class="cap"><rect x="629.95" y="802.03" width="113.32" height="113.32" rx="17.63" fill="#1F6F6B"/>
+<text x="686.61" y="858.7" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="41.55" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">sft</text></g>
+<g class="cap"><rect x="944.73" y="807.07" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="944.73" y="802.03" width="113.32" height="113.32" rx="17.63" fill="url(#capg)"/>
+<text x="1001.39" y="858.7" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="41.55" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">spc</text></g>
+<g class="cap"><rect x="1070.64" y="807.07" width="113.32" height="113.32" rx="17.63" fill="#000000" opacity="0.28"/>
+<rect x="1070.64" y="802.03" width="113.32" height="113.32" rx="17.63" fill="#2EC4B6"/>
+<text x="1127.3" y="858.7" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="41.55" font-weight="600" text-anchor="middle" fill="#062722" dominant-baseline="central">NAV</text></g>
+<g class="cap"><rect x="1196.56" y="802.03" width="113.32" height="113.32" rx="17.63" fill="#1F6F6B"/>
+<text x="1253.22" y="858.7" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="41.55" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">opt</text></g>
+</g>
+<g class="panel" data-key="sym">
+<rect x="1672" y="370" width="708" height="288" rx="18" fill="#101B2D" stroke="#1E3350" stroke-width="2"/>
+<text x="1672" y="354" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="26" font-weight="600" text-anchor="start" fill="#5AD9CB">SYMBOLS · hold left middle thumb</text>
+<g class="cap"><rect x="1706.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1706.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1732" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">&#39;</text></g>
+<g class="cap"><rect x="1762.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1762.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1788" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">&quot;</text></g>
+<g class="cap"><rect x="1818.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1818.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1844" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">^</text></g>
+<g class="cap"><rect x="1874.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1874.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1900" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">?</text></g>
+<g class="cap"><rect x="1930.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1930.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1956" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">`</text></g>
+<g class="cap"><rect x="2070.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2070.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2096" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">[</text></g>
+<g class="cap"><rect x="2126.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2126.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2152" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">&lt;</text></g>
+<g class="cap"><rect x="2182.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2182.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2208" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">=</text></g>
+<g class="cap"><rect x="2238.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2238.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2264" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">&gt;</text></g>
+<g class="cap"><rect x="2294.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2294.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2320" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">]</text></g>
+<g class="cap"><rect x="1706.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1706.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1732" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">!</text></g>
+<g class="cap"><rect x="1762.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1762.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1788" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">@</text></g>
+<g class="cap"><rect x="1818.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1818.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1844" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">#</text></g>
+<g class="cap"><rect x="1874.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1874.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1900" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">$</text></g>
+<g class="cap"><rect x="1930.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1930.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1956" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">%</text></g>
+<g class="cap"><rect x="2070.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2070.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2096" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">{</text></g>
+<g class="cap"><rect x="2126.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2126.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2152" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">(</text></g>
+<g class="cap"><rect x="2182.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2182.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2208" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">:</text></g>
+<g class="cap"><rect x="2238.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2238.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2264" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">)</text></g>
+<g class="cap"><rect x="2294.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2294.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2320" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">}</text></g>
+<g class="cap"><rect x="1706.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1706.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1732" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">\</text></g>
+<g class="cap"><rect x="1762.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1762.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1788" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">~</text></g>
+<g class="cap"><rect x="1818.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1818.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1844" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">|</text></g>
+<g class="cap"><rect x="1874.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1874.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1900" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">;</text></g>
+<g class="cap"><rect x="1930.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1930.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1956" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">&amp;</text></g>
+<g class="cap"><rect x="2070.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2070.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2096" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">/</text></g>
+<g class="cap"><rect x="2126.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2126.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2152" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">*</text></g>
+<g class="cap"><rect x="2182.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2182.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2208" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">-</text></g>
+<g class="cap"><rect x="2238.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2238.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2264" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">+</text></g>
+<g class="cap"><rect x="2294.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2294.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2320" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">_</text></g>
+<g class="cap"><g opacity="0.45">
+<rect x="1818.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="1844" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">cmd</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="1874.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="1900" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">SYM</text>
+</g></g>
+<g class="cap"><rect x="1930.8" y="575.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1930.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#2EC4B6"/>
+<text x="1956" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="600" text-anchor="middle" fill="#062722" dominant-baseline="central">ADJ</text></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2070.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2096" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">spc</text>
+</g></g>
+<g class="cap"><rect x="2126.8" y="575.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2126.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#2EC4B6"/>
+<text x="2152" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="600" text-anchor="middle" fill="#062722" dominant-baseline="central">FUN</text></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2182.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2208" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">opt</text>
+</g></g>
+</g>
+<g class="panel" data-key="nav">
+<rect x="2420" y="370" width="708" height="288" rx="18" fill="#101B2D" stroke="#1E3350" stroke-width="2"/>
+<text x="2420" y="354" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="26" font-weight="600" text-anchor="start" fill="#5AD9CB">NAVIGATION &amp; NUMBERS · hold right middle thumb</text>
+<g class="cap"><rect x="2454.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2480" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">Ctrl</text></g>
+<g class="cap"><rect x="2510.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2536" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">Cmd</text></g>
+<g class="cap"><rect x="2566.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2566.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2592" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">⇧Tab</text></g>
+<g class="cap"><rect x="2622.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2622.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2648" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Tab</text></g>
+<g class="cap"><rect x="2678.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2704" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">Alt</text></g>
+<g class="cap"><rect x="2818.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2818.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2844" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">,</text></g>
+<g class="cap"><rect x="2874.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2874.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2900" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Home</text></g>
+<g class="cap"><rect x="2930.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2930.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2956" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">↑</text></g>
+<g class="cap"><rect x="2986.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2986.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="3012" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">End</text></g>
+<g class="cap"><rect x="3042.8" y="407.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="3042.8" y="404.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="3068" y="430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Del</text></g>
+<g class="cap"><rect x="2454.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2454.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2480" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">1</text></g>
+<g class="cap"><rect x="2510.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2510.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2536" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">2</text></g>
+<g class="cap"><rect x="2566.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2566.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2592" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">3</text></g>
+<g class="cap"><rect x="2622.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2622.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2648" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">4</text></g>
+<g class="cap"><rect x="2678.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2678.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2704" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">5</text></g>
+<g class="cap"><rect x="2818.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2818.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2844" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">.</text></g>
+<g class="cap"><rect x="2874.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2874.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2900" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">←</text></g>
+<g class="cap"><rect x="2930.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2930.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2956" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">↓</text></g>
+<g class="cap"><rect x="2986.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2986.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="3012" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">→</text></g>
+<g class="cap"><rect x="3042.8" y="463.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="3042.8" y="460.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="3068" y="486" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Ent</text></g>
+<g class="cap"><rect x="2454.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2454.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2480" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">6</text></g>
+<g class="cap"><rect x="2510.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2510.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2536" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">7</text></g>
+<g class="cap"><rect x="2566.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2566.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2592" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">8</text></g>
+<g class="cap"><rect x="2622.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2622.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2648" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">9</text></g>
+<g class="cap"><rect x="2678.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2678.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2704" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">0</text></g>
+<g class="cap"><rect x="2818.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2818.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2844" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Esc</text></g>
+<g class="cap"><rect x="2874.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2874.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2900" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">PgUp</text></g>
+<g class="cap"><rect x="2930.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2930.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2956" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">PgDn</text></g>
+<g class="cap"><rect x="2986.8" y="519.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2986.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="3012" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Esc</text></g>
+<g class="cap"><rect x="3042.8" y="516.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="3068" y="542" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">Ctrl</text></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2566.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2592" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">cmd</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2622.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2648" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">SYM</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2678.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2704" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">sft</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2818.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2844" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">spc</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2874.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2900" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">NAV</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2930.8" y="572.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2956" y="598" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">opt</text>
+</g></g>
+</g>
+<g class="panel" data-key="fun">
+<rect x="1672" y="930" width="708" height="288" rx="18" fill="#101B2D" stroke="#1E3350" stroke-width="2"/>
+<text x="1672" y="914" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="26" font-weight="600" text-anchor="start" fill="#5AD9CB">FUN · hold SYM + right middle thumb</text>
+<g class="cap"><rect x="1706.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1706.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1732" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F11</text></g>
+<g class="cap"><rect x="1762.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1762.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1788" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F12</text></g>
+<g class="cap"><rect x="1818.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1818.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1844" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Shot</text></g>
+<g class="cap"><rect x="1874.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1874.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1900" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Play</text></g>
+<g class="cap"><rect x="1930.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1930.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1956" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Next</text></g>
+<g class="cap"><rect x="2070.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2070.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2096" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Wh↑</text></g>
+<g class="cap"><rect x="2126.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2126.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2152" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">LMB</text></g>
+<g class="cap"><rect x="2182.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2182.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2208" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">M↑</text></g>
+<g class="cap"><rect x="2238.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2238.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2264" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">RMB</text></g>
+<g class="cap"><rect x="2294.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2294.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2320" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Br+</text></g>
+<g class="cap"><rect x="1706.8" y="1023.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1706.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1732" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F1</text></g>
+<g class="cap"><rect x="1762.8" y="1023.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1762.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1788" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F2</text></g>
+<g class="cap"><rect x="1818.8" y="1023.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1818.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1844" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F3</text></g>
+<g class="cap"><rect x="1874.8" y="1023.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1874.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1900" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F4</text></g>
+<g class="cap"><rect x="1930.8" y="1023.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1930.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1956" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F5</text></g>
+<g class="cap"><rect x="2070.8" y="1023.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2070.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2096" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Wh↓</text></g>
+<g class="cap"><rect x="2126.8" y="1023.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2126.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2152" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">M←</text></g>
+<g class="cap"><rect x="2182.8" y="1023.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2182.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2208" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">M↓</text></g>
+<g class="cap"><rect x="2238.8" y="1023.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2238.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2264" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">M→</text></g>
+<g class="cap"><rect x="2294.8" y="1023.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2294.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2320" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Br-</text></g>
+<g class="cap"><rect x="1706.8" y="1079.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1706.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1732" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F6</text></g>
+<g class="cap"><rect x="1762.8" y="1079.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1762.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1788" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F7</text></g>
+<g class="cap"><rect x="1818.8" y="1079.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1818.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1844" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F8</text></g>
+<g class="cap"><rect x="1874.8" y="1079.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1874.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1900" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22.4" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F9</text></g>
+<g class="cap"><rect x="1930.8" y="1079.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="1930.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="1956" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">F10</text></g>
+<g class="cap"><rect x="2070.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2096" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2126.8" y="1079.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2126.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2152" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Vol-</text></g>
+<g class="cap"><rect x="2182.8" y="1079.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2182.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2208" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Vol+</text></g>
+<g class="cap"><rect x="2238.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2264" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2294.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2320" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">spc</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="1818.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="1844" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">cmd</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="1874.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="1900" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">SYM</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="1930.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="1956" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">sft</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2070.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2096" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">spc</text>
+</g></g>
+<g class="cap"><rect x="2126.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2152" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2182.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2208" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+</g>
+<g class="panel" data-key="adj">
+<rect x="2420" y="930" width="708" height="288" rx="18" fill="#101B2D" stroke="#1E3350" stroke-width="2"/>
+<text x="2420" y="914" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="26" font-weight="600" text-anchor="start" fill="#5AD9CB">ADJUST · hold SYM + left inner thumb</text>
+<g class="cap"><rect x="2454.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2480" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2510.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2536" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2566.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2592" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2622.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2648" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2678.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2704" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2818.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2818.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2844" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">Caps</text></g>
+<g class="cap"><rect x="2874.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2900" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2930.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2956" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2986.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="3012" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="3042.8" y="967.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="3042.8" y="964.8" width="50.4" height="50.4" rx="7.84" fill="#2EC4B6"/>
+<text x="3068" y="990" font-family="Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" fill="#062722" dominant-baseline="central">rset</text></g>
+<g class="cap"><rect x="2454.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2480" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2510.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2536" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2566.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2592" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2622.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2648" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2678.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2704" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2818.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2844" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2874.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2900" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2930.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2956" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2986.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="3012" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="3042.8" y="1020.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="3068" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2454.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2480" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2510.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2536" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2566.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2592" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2622.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2648" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2678.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2704" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="2818.8" y="1079.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2818.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2844" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">RGB</text></g>
+<g class="cap"><rect x="2874.8" y="1079.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2874.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2900" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">RGB+</text></g>
+<g class="cap"><rect x="2930.8" y="1079.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="2930.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="url(#capg)"/>
+<text x="2956" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15.12" font-weight="500" text-anchor="middle" fill="#15202E" dominant-baseline="central">RGB-</text></g>
+<g class="cap"><rect x="2986.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="3012" y="1102" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><rect x="3042.8" y="1079.04" width="50.4" height="50.4" rx="7.84" fill="#000000" opacity="0.28"/>
+<rect x="3042.8" y="1076.8" width="50.4" height="50.4" rx="7.84" fill="#2EC4B6"/>
+<text x="3068" y="1102" font-family="Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" fill="#062722" dominant-baseline="central">boot</text></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2566.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2592" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">cmd</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2622.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2648" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">SYM</text>
+</g></g>
+<g class="cap"><rect x="2678.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#16233A"/>
+<text x="2704" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19.6" font-weight="500" text-anchor="middle" fill="#546A8C" dominant-baseline="central">–</text></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2818.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2844" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">spc</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2874.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2900" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">NAV</text>
+</g></g>
+<g class="cap"><g opacity="0.45">
+<rect x="2930.8" y="1132.8" width="50.4" height="50.4" rx="7.84" fill="#1F6F6B"/>
+<text x="2956" y="1158" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18.48" font-weight="500" text-anchor="middle" fill="#D9F5F1" dominant-baseline="central">opt</text>
+</g></g>
+</g>
+<g class="callout">
+<text x="1430" y="1039" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="600" text-anchor="middle" fill="#F2B84B">Dual-role Ctrl</text>
+<text x="1430" y="1075" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">Hold Q or Enter to send</text>
+<text x="1430" y="1105" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">Ctrl. A tap types the key.</text>
+</g>
+<polyline class="leader" points="1505.04,789.44 1505.04,975 1430,1000" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<circle class="leader-dot" cx="1505.04" cy="789.44" r="6" fill="#F2B84B"/>
+<circle class="leader-dot" cx="1430" cy="1000" r="6" fill="#F2B84B"/>
+<g class="callout">
+<text x="844" y="1039" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="600" text-anchor="middle" fill="#F2B84B">Layer keys</text>
+<text x="844" y="1075" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">Hold the middle thumbs: left for symbols,</text>
+<text x="844" y="1105" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">right for navigation.</text>
+</g>
+<polyline class="leader" points="560.7,915.36 700,1000" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<circle class="leader-dot" cx="560.7" cy="915.36" r="6" fill="#F2B84B"/>
+<circle class="leader-dot" cx="700" cy="1000" r="6" fill="#F2B84B"/>
+<polyline class="leader" points="1127.3,915.36 988,1000" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<circle class="leader-dot" cx="1127.3" cy="915.36" r="6" fill="#F2B84B"/>
+<circle class="leader-dot" cx="988" cy="1000" r="6" fill="#F2B84B"/>
+<g class="callout">
+<text x="2203" y="724" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="600" text-anchor="middle" fill="#F2B84B">Fun layer</text>
+<text x="2203" y="760" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">Hold SYM, then this thumb for</text>
+<text x="2203" y="790" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">F-keys, media and screenshot.</text>
+</g>
+<polyline class="leader" points="2152,623.2 2203,686" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<circle class="leader-dot" cx="2152" cy="623.2" r="4.5" fill="#F2B84B"/>
+<circle class="leader-dot" cx="2203" cy="686" r="4.5" fill="#F2B84B"/>
+<g class="callout">
+<text x="1849" y="724" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="600" text-anchor="middle" fill="#F2B84B">Adjust layer</text>
+<text x="1849" y="760" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">Hold SYM, then this thumb for</text>
+<text x="1849" y="790" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">Caps, RGB, reset, flashing.</text>
+</g>
+<polyline class="leader" points="1956,623.2 1849,686" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<circle class="leader-dot" cx="1956" cy="623.2" r="4.5" fill="#F2B84B"/>
+<circle class="leader-dot" cx="1849" cy="686" r="4.5" fill="#F2B84B"/>
+<g class="callout">
+<text x="2597" y="724" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="600" text-anchor="middle" fill="#F2B84B">Number pad</text>
+<text x="2597" y="760" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">Digits 1-0 sit in two home</text>
+<text x="2597" y="790" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">rows under the left hand.</text>
+</g>
+<polyline class="leader" points="2480,567.2 2597,686" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<circle class="leader-dot" cx="2480" cy="567.2" r="4.5" fill="#F2B84B"/>
+<circle class="leader-dot" cx="2597" cy="686" r="4.5" fill="#F2B84B"/>
+<g class="callout">
+<text x="2951" y="724" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="600" text-anchor="middle" fill="#F2B84B">Arrows at home</text>
+<text x="2951" y="760" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">Left, Down and Right sit on</text>
+<text x="2951" y="790" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">the home row; Up above.</text>
+</g>
+<polyline class="leader" points="2956,404.8 2956,385 3105,385 3105,686 2951,686" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<circle class="leader-dot" cx="2956" cy="404.8" r="4.5" fill="#F2B84B"/>
+<circle class="leader-dot" cx="2951" cy="686" r="4.5" fill="#F2B84B"/>
+<g class="callout">
+<text x="1849" y="1280" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="600" text-anchor="middle" fill="#F2B84B">Screenshot</text>
+<text x="1849" y="1316" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">Cmd+Shift+Ctrl+4 on macOS,</text>
+<text x="1849" y="1346" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">Win+Shift+S on Windows.</text>
+</g>
+<polyline class="leader" points="1844,964.8 1844,945 1690,945 1690,1246 1849,1246" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<circle class="leader-dot" cx="1844" cy="964.8" r="4.5" fill="#F2B84B"/>
+<circle class="leader-dot" cx="1849" cy="1246" r="4.5" fill="#F2B84B"/>
+<g class="callout">
+<text x="2951" y="1280" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="600" text-anchor="middle" fill="#F2B84B">Reset &amp; update</text>
+<text x="2951" y="1316" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">rset wipes the stored keymap;</text>
+<text x="2951" y="1346" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">boot enters firmware flash.</text>
+</g>
+<polyline class="leader" points="3093.2,990 3110,990 3110,1246 3110,1246" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<circle class="leader-dot" cx="3093.2" cy="990" r="4.5" fill="#F2B84B"/>
+<circle class="leader-dot" cx="3110" cy="1246" r="4.5" fill="#F2B84B"/>
+<polyline class="leader" points="3068,1127.2 3068,1246" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<circle class="leader-dot" cx="3068" cy="1127.2" r="4.5" fill="#F2B84B"/>
+<circle class="leader-dot" cx="3068" cy="1246" r="4.5" fill="#F2B84B"/>
+<g class="callout">
+<text x="2597" y="1280" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="600" text-anchor="middle" fill="#F2B84B">Lighting</text>
+<text x="2597" y="1316" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">Toggle and step through the</text>
+<text x="2597" y="1346" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24.5" font-weight="400" text-anchor="middle" fill="#F2B84B">LED effects.</text>
+</g>
+<polyline class="leader" points="2818.8,1102 2774,1102 2774,1246 2597,1246" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<circle class="leader-dot" cx="2818.8" cy="1102" r="4.5" fill="#F2B84B"/>
+<circle class="leader-dot" cx="2597" cy="1246" r="4.5" fill="#F2B84B"/>
+<line class="rule" x1="72.0" y1="1600" x2="3128.0" y2="1600" stroke="#24405F" stroke-width="2"/>
+<text x="72" y="1642" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#8FA6C4">10-column, 36-key split · QWERTY base</text>
+<text x="3128" y="1642" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="end" fill="#8FA6C4">github.com/FarzadHayat/omakeys</text>
+</svg>
