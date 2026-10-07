@@ -1,7 +1,7 @@
 # layerlens_notify (QMK module)
 
 A small QMK module that exposes the active-layer bitmask to the
-[LayerLens](../../README.md) macOS app over Raw HID, so the floating
+[LayerLens](https://github.com/FireBall1725/LayerLens) macOS app over Raw HID, so the floating
 overlay can mirror your active layers in real time.
 
 GPL-3.0-only.
