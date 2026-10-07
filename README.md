@@ -40,10 +40,11 @@ board.
 
 ## Layer overlays
 
-[LayerLens](https://github.com/FireBall1725/LayerLens) (macOS 15+) and
-[KeyPeek](https://github.com/srwi/KeyPeek) (0.6.0+, Windows/Linux/macOS) show
-the active layer while you type. Run one at a time; either can stay open next
-to VIA.
+On Omarchy/Hyprland, use the in-repo **Omakeys** app (`omakeys` CLI): [`overlay/README.md`](overlay/README.md).
+
+Also: [LayerLens](https://github.com/FireBall1725/LayerLens) (macOS 15+) and
+[KeyPeek](https://github.com/srwi/KeyPeek) (0.6.0+, Windows/Linux/macOS).
+Run one overlay at a time; they share Raw HID with each other and with VIA.
 
 ## Firmware files
 

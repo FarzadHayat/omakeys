@@ -2,3 +2,11 @@
 
 # ARM toolchain (~1 GB) — not part of the source, fetch separately
 tools/toolchain/
+
+# Git worktrees
+.worktrees/
+
+# Local agent planning (do not commit)
+docs/superpowers/plans/
+docs/superpowers/specs/
+.opencode/plans/

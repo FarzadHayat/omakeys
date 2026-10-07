@@ -1,0 +1,6 @@
+# Omakeys (LoremIpsum36) - grant logged-in user Raw HID access for KeyPeek/VIA.
+# Install: sudo cp tools/50-omakeys.rules /etc/udev/rules.d/ && sudo udevadm control --reload-rules && sudo udevadm trigger
+# Then unplug and replug the keyboard.
+KERNEL=="hidraw*", ATTRS{idVendor}=="5254", ATTRS{idProduct}=="0008", TAG+="uaccess"
+# RP2040 UF2 bootloader (for flashing).
+ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0003", TAG+="uaccess"
