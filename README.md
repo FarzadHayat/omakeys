@@ -1,5 +1,7 @@
 # Omakeys
 
+[![Built for Omarchy: App](https://raw.githubusercontent.com/tcballard/omarchy-badges/75975e5b5bf75e7ede3764bcd2950046f7abfe2c/badges/v1/omarchy-app.svg)](https://github.com/tcballard/omarchy-badges)
+
 Two parts: a **desktop overlay** for Omarchy that shows what every key does on
 the layer you are on (works with any keyboard), and **firmware** for a 36-key
 board.
