@@ -1,26 +1,5 @@
 # Omakeys
 
-[![Built for Omarchy: App](https://raw.githubusercontent.com/tcballard/omarchy-badges/75975e5b5bf75e7ede3764bcd2950046f7abfe2c/badges/v1/omarchy-app.svg)](https://github.com/tcballard/omarchy-badges)
-
-Two parts: a **desktop overlay** for Omarchy that shows what every key does on
-the layer you are on (works with any keyboard), and **firmware** for a 36-key
-board.
-
-![omakeys overlay on an Omarchy desktop](overlay/docs/screenshot.png)
-
-## Desktop overlay
-
-```bash
-git clone https://github.com/FarzadHayat/omakeys
-cd omakeys
-./overlay/dist/install-desktop.sh
-```
-
-Follows your Omarchy theme, shows your real Hyprland binds, uninstalls clean.
-Install, customise for your own keyboard, uninstall: [`overlay/README.md`](overlay/README.md).
-
-## Firmware
-
 A 36-key keyboard for first-time users, running beginner-friendly QMK/VIA
 firmware: QWERTY out of the box, five clear layers, VIA remapping, and
 optional live layer overlays. Built on the penk **LoremIpsum36** kit.
@@ -61,11 +40,12 @@ board.
 
 ## Layer overlays
 
-Use the **Omakeys** desktop overlay above. It reads the in-repo notify protocol
-on rsta firmware and falls back to the legacy client for boards that stay
-silent (starter retail firmware, older rsta flashes). The choice is made once
-per app start, so switching a board between protocol and legacy firmware needs
-an app restart.
+On Omarchy/Hyprland, use the **[omakeys-overlay](https://github.com/FarzadHayat/omakeys-overlay)**
+desktop app. It shows what every key does on the layer you are on, and works
+with any keyboard. It reads the in-repo notify protocol on rsta firmware and
+falls back to the legacy client for boards that stay silent (starter retail
+firmware, older rsta flashes). The choice is made once per app start, so
+switching a board between protocol and legacy firmware needs an app restart.
 
 [LayerLens](https://github.com/FireBall1725/LayerLens) (macOS 15+) and
 [KeyPeek](https://github.com/srwi/KeyPeek) (0.6.0+, Windows/Linux/macOS)
@@ -81,11 +61,11 @@ overlays and VIA share Raw HID.
 
 ## License
 
-- **Desktop overlay** (`overlay/`): MIT, see [`overlay/LICENSE`](overlay/LICENSE).
-- **Firmware and keymap**: GPL-3.0, see [`LICENSE`](LICENSE). Starter firmware
-  vendors and links the layer-notify modules, which keep their own licenses
-  (KeyPeek: GPL-2.0-or-later, LayerLens: GPL-3.0-only), so distributed starter
-  firmware is effectively GPL-3.0. The rsta build links neither: it uses the
-  in-repo `omakeys_notify` module (GPL-3.0-only). Keymap inspired by
-  rstacruz's qmk-base36. The vendored keyboard design and board files from
-  penk's LoremIpsum36 are MIT (see `keyboard/penk/loremipsum36/LICENSE`).
+GPL-3.0. Starter firmware vendors and links the layer-notify modules, which
+keep their own licenses (KeyPeek: GPL-2.0-or-later, LayerLens: GPL-3.0-only),
+so distributed starter firmware is effectively GPL-3.0. The rsta build links
+neither: it uses the in-repo `omakeys_notify` module (GPL-3.0-only). Keymap
+inspired by rstacruz's qmk-base36. The vendored keyboard design and board
+files from penk's LoremIpsum36 are MIT (see
+`keyboard/penk/loremipsum36/LICENSE`). The desktop overlay is a separate
+MIT-licensed project.
