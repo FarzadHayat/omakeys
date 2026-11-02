@@ -63,10 +63,10 @@ pub enum HoverMode {
     Tooltip,
     /// Hop to another anchor while the pointer is over the overlay's home
     /// area, so the text underneath can be read.
-    #[default]
     Dodge,
     /// On-screen keyboard: the overlay keeps pointer input and tooltips, and
     /// a click types that key into the focused window (needs access to `/dev/uinput`).
+    #[default]
     Type,
 }
 
@@ -190,7 +190,7 @@ impl Default for AppConfig {
             mode: VisibilityMode::Auto,
             timeout_ms: 2000,
             anchor: Anchor::BottomRight,
-            opacity: 0.92,
+            opacity: 0.8,
             scale: default_scale(),
             toggle_chord: "SUPER+ALT+O".into(),
             board: "auto".into(),
@@ -334,10 +334,10 @@ mod tests {
     }
 
     #[test]
-    fn missing_hover_table_defaults_to_dodge() {
+    fn missing_hover_table_defaults_to_type() {
         let s = "mode = \"auto\"\ntimeout_ms = 2000\nanchor = \"bottom_right\"\nopacity = 0.9\nscale = 0.5\ntoggle_chord = \"SUPER+ALT+O\"\ntray_visible = true\n";
         let cfg: AppConfig = toml::from_str(s).unwrap();
-        assert_eq!(cfg.hover.mode, HoverMode::Dodge);
+        assert_eq!(cfg.hover.mode, HoverMode::Type);
     }
 
     #[test]

@@ -32,25 +32,28 @@ With several keyboards connected, Auto switches on keypress. With several QMK bo
 
 `~/.config/omakeys/config.toml`:
 
-| Key | Meaning |
-| --- | --- |
-| `board` | `auto` or a profile name |
-| `mode`, `timeout_ms` | when the overlay shows, and how long it stays |
-| `anchor`, `scale`, `opacity` | position, size, transparency |
-| `tray_visible` | show the bar icon |
-| `toggle_chord` | label shown for the toggle key |
-| `label_style` | `icons` or text legends |
-| `[binds] enabled` | `false` never swaps to modifier bind layers |
-| `[binds] standard` | `true` adds built-in Ctrl hints and Alt F4, skipping any a real bind already covers. `false` shows only real host binds |
-| `[hover] mode` | `dodge` (default), `tooltip`, `type`, `off` |
+| Key | Default | Meaning |
+| --- | --- | --- |
+| `board` | `auto` | `auto` or a profile name |
+| `mode` | `auto` | `auto` shows while you type, `always` stays up |
+| `timeout_ms` | `2000` | how long it stays after the last key |
+| `anchor` | `bottom_right` | screen corner or edge |
+| `scale` | `0.5` | size, 0.2 to 1.0 of the shorter screen side |
+| `opacity` | `0.8` | transparency, 0.05 to 1.0 |
+| `tray_visible` | `true` | show the bar icon |
+| `toggle_chord` | `SUPER+ALT+O` | label shown for the toggle key (it does not create the bind) |
+| `label_style` | `icons` | `icons` or text legends |
+| `[binds] enabled` | `true` | `false` never swaps to modifier bind layers |
+| `[binds] standard` | `true` | adds built-in Ctrl hints and Alt F4, skipping any a real bind already covers. `false` shows only real host binds |
+| `[hover] mode` | `type` | `type`, `dodge`, `tooltip`, `off` |
 
 While a modifier is held the overlay shows that combo's host binds, read from `omarchy menu keybindings --print` and refreshed when your Hyprland config changes. Bound keys draw their legend, unbound keys go blank.
 
 ### Hover modes
 
+- `type` (default): an on-screen keyboard. Tooltips as below, and a left click sends the key to the focused window through a virtual keyboard.
 - `dodge`: the overlay hops to the next spot along the screen edge, away from the pointer, so you can read what is underneath. It returns when the pointer leaves its home area.
 - `tooltip`: a tooltip while the pointer rests on a key, only where the key text cannot speak for itself (bind description, icon name, hold role).
-- `type`: an on-screen keyboard. Tooltips as above, and a left click sends the key to the focused window through a virtual keyboard.
 - `off`: ignores the pointer and stays fully click-through.
 
 `dodge`, `tooltip` and `type` make the overlay accept input, so clicks over its area do not reach windows below.

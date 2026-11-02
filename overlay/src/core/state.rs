@@ -905,6 +905,9 @@ mod tests {
             loremipsum36(),
             AppConfig {
                 mode: VisibilityMode::Always,
+                hover: crate::core::config::HoverConfig {
+                    mode: HoverMode::Dodge,
+                },
                 ..AppConfig::default()
             },
             Overrides::default(),

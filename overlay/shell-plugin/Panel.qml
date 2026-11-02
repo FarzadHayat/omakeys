@@ -463,7 +463,7 @@ Panel {
                 id: opacitySlider
                 width: parent.width
                 bar: root.bar
-                value: Math.min(16, Math.max(0, Math.round((((Number(root.cfg.opacity) || 0.92) * 100) - 20) / 5)))
+                value: Math.min(16, Math.max(0, Math.round((((Number(root.cfg.opacity) || 0.8) * 100) - 20) / 5)))
                 minimum: 0
                 maximum: 16
                 step: 1
@@ -514,7 +514,7 @@ Panel {
               width: parent.width
               label: "Pointer over overlay"
               value: {
-                var m = (root.cfg.hover && root.cfg.hover.mode) ? root.cfg.hover.mode : "dodge"
+                var m = (root.cfg.hover && root.cfg.hover.mode) ? root.cfg.hover.mode : "type"
                 return m === "type" ? "type" : "dodge"
               }
               options: [

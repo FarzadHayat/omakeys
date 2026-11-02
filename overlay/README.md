@@ -70,7 +70,7 @@ Everything lives in `~/.config/omakeys/config.toml`. The settings panel edits it
 | --- | --- |
 | `board` | `auto`, `generic`, or a board name |
 | `anchor`, `scale`, `opacity` | where it sits and how big |
-| `[hover] mode` | what the pointer does: `dodge`, `tooltip`, `type`, `off` |
+| `[hover] mode` | what the pointer does: `type` (default), `dodge`, `tooltip`, `off` |
 | `[binds] enabled` | show your Hyprland binds while a modifier is held |
 
 All options, hover modes, the on-screen keyboard mode and per-key overrides: [docs/reference.md](docs/reference.md).
