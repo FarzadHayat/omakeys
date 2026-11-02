@@ -31,11 +31,8 @@ Panel {
   readonly property color foreground: bar ? bar.foreground : Color.foreground
   readonly property color dim: Qt.darker(foreground, 1.55)
   readonly property string fontFamily: bar ? bar.fontFamily : Style.font.family
-  readonly property string omakeysBin: {
-    var home = Quickshell.env("HOME") || ""
-    var cargo = home + "/.cargo/bin/omakeys"
-    return cargo
-  }
+  // install-desktop.sh pins this to the installed binary's absolute path.
+  readonly property string omakeysBin: "omakeys"
 
   readonly property var modeOptions: [
     { value: "always", label: "Always" },
@@ -54,6 +51,13 @@ Panel {
   readonly property var labelOptions: [
     { value: "icons", label: "Icons" },
     { value: "text", label: "Text" }
+  ]
+  // Filled by `omakeys boards`; fallback until that returns.
+  property var boardOptions: [
+    { value: "auto", label: "Auto (follow typing)" },
+    { value: "generic", label: "Generic" },
+    { value: "loremipsum36", label: "Omakeys" },
+    { value: "samsung-trio-500", label: "Samsung Trio 500" }
   ]
 
   function open() {
@@ -83,6 +87,8 @@ Panel {
 
   function refresh() {
     errorText = ""
+    boardsProc.running = false
+    boardsProc.running = true
     pingProc.running = false
     pingProc.running = true
   }
@@ -215,6 +221,22 @@ Panel {
   }
 
   Process {
+    id: boardsProc
+    command: [root.omakeysBin, "boards"]
+    running: false
+    stdout: StdioCollector {
+      waitForEnd: true
+      onStreamFinished: {
+        try {
+          var rows = JSON.parse(text)
+          if (Array.isArray(rows) && rows.length > 0)
+            root.boardOptions = rows
+        } catch (e) { /* keep fallback */ }
+      }
+    }
+  }
+
+  Process {
     id: configPrintProc
     command: [root.omakeysBin, "config-print"]
     running: false
@@ -267,7 +289,7 @@ Panel {
     open: root.opened
     focusTarget: keyCatcher
     contentWidth: panel.fittedContentWidth(Style.space(360))
-    contentHeight: panel.fittedContentHeight(column.implicitHeight, Style.space(560))
+    contentHeight: panel.fittedContentHeight(column.implicitHeight)
 
     PanelKeyCatcher {
       id: keyCatcher
@@ -372,6 +394,16 @@ Panel {
 
             ToggleDropdown {
               width: parent.width
+              label: "Board"
+              value: root.cfg.board || "auto"
+              options: root.boardOptions
+              foreground: root.foreground
+              fontFamily: root.fontFamily
+              onChanged: function (v) { root.patchCfg("board", v) }
+            }
+
+            ToggleDropdown {
+              width: parent.width
               label: "Show when"
               value: root.cfg.mode === "hidden" ? "auto" : root.cfg.mode
               options: root.modeOptions
@@ -447,8 +479,8 @@ Panel {
               spacing: Style.spacing.md
               Text {
                 textFormat: Text.PlainText
-                // Index 0..10 → 50%..150% in 10% steps (same integer snap as timeout).
-                text: "Size  " + (50 + Math.round(sizeSlider.liveValue) * 10) + "%"
+                // Index 0..8 → 20%..100% of the screen's shorter side, 10% steps.
+                text: "Size  " + (20 + Math.round(sizeSlider.liveValue) * 10) + "%"
                 color: root.dim
                 font.family: root.fontFamily
                 font.pixelSize: Style.font.bodySmall
@@ -457,13 +489,13 @@ Panel {
                 id: sizeSlider
                 width: parent.width
                 bar: root.bar
-                value: Math.min(10, Math.max(0, Math.round((((Number(root.cfg.scale) || 1) * 100) - 50) / 10)))
+                value: Math.min(8, Math.max(0, Math.round(((Number(root.cfg.scale) || 0.50) * 100 - 20) / 10)))
                 minimum: 0
-                maximum: 10
+                maximum: 8
                 step: 1
                 integer: true
                 onReleased: function (v) {
-                  root.patchCfg("scale", (50 + Math.round(v) * 10) / 100)
+                  root.patchCfg("scale", (20 + Math.round(v) * 10) / 100)
                 }
               }
             }
@@ -476,6 +508,22 @@ Panel {
               foreground: root.foreground
               fontFamily: root.fontFamily
               onChanged: function (v) { root.patchCfg("label_style", v) }
+            }
+
+            ToggleDropdown {
+              width: parent.width
+              label: "Pointer over overlay"
+              value: {
+                var m = (root.cfg.hover && root.cfg.hover.mode) ? root.cfg.hover.mode : "dodge"
+                return m === "type" ? "type" : "dodge"
+              }
+              options: [
+                { value: "dodge", label: "Move away" },
+                { value: "type", label: "Type + tooltips" }
+              ]
+              foreground: root.foreground
+              fontFamily: root.fontFamily
+              onChanged: function (v) { root.patchCfg("hover", { mode: v }) }
             }
 
             Button {

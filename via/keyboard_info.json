@@ -2,20 +2,31 @@
     "manufacturer": "Omakeys",
     "keyboard_name": "Omakeys",
     "maintainer": "FarzadHayat",
+    "_invalid": {
+        "combo": {
+            "count": "8"
+        }
+    },
     "bootloader": "rp2040",
     "build": {
         "lto": true
     },
+    "combo": {
+        "term": 25
+    },
     "diode_direction": "COL2ROW",
     "dynamic_keymap": {
-        "layer_count": 5
+        "layer_count": 14
     },
     "features": {
         "backlight": false,
         "bootmagic": true,
+        "combo": true,
         "command": false,
         "console": false,
         "extrakey": true,
+        "key_override": true,
+        "layer_lock": true,
         "mousekey": true,
         "nkro": false,
         "os_detection": true,
@@ -34,6 +45,9 @@
         "max_speed": 6,
         "time_to_max": 32,
         "wheel_delay": 0
+    },
+    "oneshot": {
+        "timeout": 500
     },
     "processor": "RP2040",
     "rgb_matrix": {
@@ -100,10 +114,12 @@
         "sleep": true
     },
     "tapping": {
+        "force_hold": true,
         "hold_on_other_key_press_per_key": true,
         "permissive_hold": true,
         "term": 125,
-        "term_per_key": true
+        "term_per_key": true,
+        "toggle": 2
     },
     "usb": {
         "device_version": "1.0.0",

@@ -1,60 +1,94 @@
-# omakeys (desktop app)
+# omakeys
 
-Live layer map for the Omakeys LoremIpsum36 keyboard on Omarchy / Hyprland.
+**A floating live key map for Omarchy: see what every key does on the layer you are on.**
 
-Shows what each key does on the active QMK layer. Layout labels come from the keyboard over USB (VIA). Geometry is the built-in LoremIpsum36 profile.
+![omakeys overlay on an Omarchy desktop](docs/screenshot.png)
 
-## Requirements
-
-- Omarchy / Hyprland (Wayland)
-- GTK4 + gtk4-layer-shell
-- udev rule so your user can open the board’s hidraw (installed by the install script; source: `tools/50-omakeys.rules` in the repo root)
-- rsta firmware with KeyPeek notify + VIA/RAW enabled
-- Do **not** run stock KeyPeek or LayerLens host apps at the same time (shared Raw HID)
+- Works with any keyboard. Laptop, USB and Bluetooth boards get an ANSI layout that lights up as you type.
+- QMK boards get the full layer map. The board is described by one small TOML file.
+- Follows your Omarchy theme. Switch themes and the overlay recolors, no restart.
+- Hold Super, Ctrl or Alt and it shows your real Hyprland binds on the keys.
+- Uninstalls clean with one command.
 
 ## Install
 
+You need Omarchy (Hyprland on Wayland). Then:
+
 ```bash
+git clone https://github.com/FarzadHayat/omakeys
+cd omakeys
 ./overlay/dist/install-desktop.sh
 ```
 
-One command. It builds/installs the `omakeys` binary (`--skip-build` to skip),
-then the **desktop entry** (app menu: **Omakeys**), icons, the Omarchy bar
-plugin, its bar slot in `shell.json`, and a **systemd user service** that
-starts the daemon at login and restarts it on crash. If the udev rule for
-board HID access is missing, it installs that too with sudo (`--no-udev` to
-skip). Re-run the same command to rebuild and restart the daemon.
-
-Check or control the daemon:
+It builds the app, adds an **Omakeys** menu entry and bar icon, and starts it at login. It asks for `sudo` once to let your user read keyboards (udev rule and `input` group). Log out and in after the first install, then run:
 
 ```bash
-systemctl --user status omakeys.service
-systemctl --user stop omakeys.service    # start to bring it back
+omakeys doctor
 ```
 
-Hyprland binds (optional): copy lines from `overlay/dist/hypr-binds.conf` into your Hyprland config.
+`doctor` checks everything and tells you what to fix.
 
-## Config
+## Use it
 
-`~/.config/omakeys/config.toml` — visibility mode, timeout, position, opacity, tray, toggle chord label.
+- **Toggle:** `Super + Alt + O` after you add the bind below, or run `omakeys toggle`.
+- **Settings:** left-click the bar icon, or run `omakeys settings`.
+- **Pick a board:** Auto follows whichever keyboard you type on. Pin one in settings to lock it.
 
-`~/.config/omakeys/overrides.toml` — per-key text/emoji overrides:
+### Add the toggle key
 
-```toml
-[[override]]
-layer = 2
-row = 0
-col = 3
-label = "‽"
+Nothing is bound for you, so your Hyprland config is never touched. `Super + Alt + O` is unused by Omarchy defaults. The installer prints the exact line for your machine. Add it to `~/.config/hypr/bindings.lua`:
+
+```lua
+o.bind("SUPER + ALT + O", "Omakeys overlay", "/home/you/.cargo/bin/omakeys toggle")
 ```
 
-## CLI
+Older `.conf` setups:
+
+```
+bind = SUPER ALT, O, exec, /home/you/.cargo/bin/omakeys toggle
+```
+
+Use the full path: Hyprland often does not have `~/.cargo/bin` on its PATH.
+
+## Use it with your own keyboard
+
+Pick the case that fits.
+
+1. **Any normal keyboard.** Nothing to do. Auto (or `generic`) already lights up keys on a standard ANSI layout. Non-US layouts light the right keys but show US legends.
+2. **A QMK board with layers.** Two steps:
+   1. Your firmware must report layers over Raw HID. Add the `omakeys_notify` QMK module (`modules/omakeys/omakeys_notify`). KeyPeek or LayerLens modules also work.
+   2. Copy [`examples/boards/example.toml`](examples/boards/example.toml) to `~/.config/omakeys/boards/<name>.toml` and fill in your USB ids, layer names and key positions. Run `omakeys doctor` to see your board's ids.
+
+   The app picks the new file up within a couple of seconds. Re-run the install script once so the udev rule covers your board.
+3. **An odd laptop layout.** Run `omakeys keys` and press keys to see their Linux codes. Custom evdev layouts are not TOML yet: use Generic, or send a pull request with a Rust layout (see the Samsung Trio 500 profile).
+
+## Settings
+
+Everything lives in `~/.config/omakeys/config.toml`. The settings panel edits it for you. The most useful keys:
+
+| Key | What it does |
+| --- | --- |
+| `board` | `auto`, `generic`, or a board name |
+| `anchor`, `scale`, `opacity` | where it sits and how big |
+| `[hover] mode` | what the pointer does: `dodge`, `tooltip`, `type`, `off` |
+| `[binds] enabled` | show your Hyprland binds while a modifier is held |
+
+All options, hover modes, the on-screen keyboard mode and per-key overrides: [docs/reference.md](docs/reference.md).
+
+## Uninstall
 
 ```bash
-omakeys run        # daemon (default)
-omakeys toggle     # show/hide
-omakeys settings   # open settings
+./overlay/dist/install-desktop.sh --uninstall
 ```
+
+Removes the service, menu entry, icons, bar icon and udev rule, and uninstalls the binary. Your config is kept unless you add `--purge`. Two things the script cannot safely undo for you: the bind line in `bindings.lua`, and your `input` group membership (`sudo gpasswd -d $USER input`).
+
+## Good to know
+
+- Run one overlay at a time. Overlays and VIA share Raw HID.
+- The `input` group can read every keyboard on the machine. Only install on a machine you trust.
+- Hover "type" mode needs write access to `/dev/uinput`.
+- Check or stop the daemon: `systemctl --user status omakeys.service`.
 
 ## Develop
 
@@ -62,3 +96,9 @@ omakeys settings   # open settings
 cargo test --manifest-path overlay/Cargo.toml
 cargo run --manifest-path overlay/Cargo.toml -- run
 ```
+
+Commands: `omakeys run | toggle | settings | boards | keys | doctor | udev-rules`.
+
+## License
+
+MIT, see [LICENSE](LICENSE). Made for the Omakeys LoremIpsum36 keyboard. The keyboard firmware in this repo is GPL-3.0.

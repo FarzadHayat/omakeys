@@ -1,6 +1,21 @@
-# Omakeys (LoremIpsum36) - grant logged-in user Raw HID access for KeyPeek/VIA.
-# Install: sudo cp tools/50-omakeys.rules /etc/udev/rules.d/ && sudo udevadm control --reload-rules && sudo udevadm trigger
-# Then unplug and replug the keyboard.
-KERNEL=="hidraw*", ATTRS{idVendor}=="5254", ATTRS{idProduct}=="0008", TAG+="uaccess"
-# RP2040 UF2 bootloader (for flashing).
-ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0003", TAG+="uaccess"
+# Omakeys (LoremIpsum36) - grant the user Raw HID access for KeyPeek/VIA.
+#
+# TAG+="uaccess" alone is not enough: it only applies when systemd-logind already
+# has an active seat session at the moment the device is enumerated, and it does
+# nothing on setups where those nodes never get the tag (Wayland/seatd desktops).
+# A boot that enumerates the board before login then leaves the overlay unable to
+# open hidraw. The group and mode are applied on every device add, with no
+# dependency on login state; uaccess stays as a harmless extra.
+#
+# Install: sudo install -m 644 tools/50-omakeys.rules /etc/udev/rules.d/
+#          sudo usermod -aG input "$USER"     # one re-login picks it up
+#          sudo udevadm control --reload-rules
+#          sudo udevadm trigger --subsystem-match=hidraw
+#
+# Security: membership of the input group allows raw HID writes to the board
+# (keymap changes, entering the bootloader) and read access to other input
+# devices, so any process running as the user can do both.
+KERNEL=="hidraw*", ATTRS{idVendor}=="5254", ATTRS{idProduct}=="0008", GROUP="input", MODE="0660", TAG+="uaccess"
+# RP2040 UF2 bootloader (for flashing): matches every node of the device, so the
+# tty used by the flasher is covered too.
+SUBSYSTEM=="usb", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0003", GROUP="input", MODE="0660", TAG+="uaccess"

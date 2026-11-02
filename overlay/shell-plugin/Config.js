@@ -6,10 +6,14 @@ function defaultConfig() {
     timeout_ms: 2000,
     anchor: "bottom_right",
     opacity: 0.92,
-    scale: 1.0,
+    scale: 0.50,
     toggle_chord: "SUPER+ALT+O",
+    board: "auto",
     label_style: "icons",
-    tray_visible: true
+    tray_visible: true,
+    // Carried through so a save never resets the daemon's defaults.
+    binds: { enabled: true, standard: true },
+    hover: { mode: "dodge" }
   }
 }
 

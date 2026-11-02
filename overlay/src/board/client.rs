@@ -12,8 +12,6 @@ use super::protocol::{
     HostEvent, REPORT_LEN,
 };
 
-pub const VID: u16 = 0x5254;
-pub const PID: u16 = 0x0008;
 pub const USAGE_PAGE: u16 = 0xFF60;
 pub const USAGE: u16 = 0x61;
 const KEEPALIVE: Duration = Duration::from_millis(1500);
@@ -67,7 +65,7 @@ impl Keymap {
 /// QMK layer-tap / momentary / toggle / goto — holding or tapping these
 /// changes `layer_state`. Plain mods and mod-tap letters do not.
 fn keycode_can_change_layer(kc: u16) -> bool {
-    matches!(kc, 0x4000..=0x4FFF | 0x5200..=0x525F)
+    matches!(kc, 0x4000..=0x4FFF | 0x5200..=0x529F)
 }
 
 pub trait BoardClient: Send {
@@ -99,6 +97,8 @@ impl BoardClient for MockBoard {
 
 pub struct HidBoardClient {
     api: HidApi,
+    vid: u16,
+    pid: u16,
     device: Option<HidDevice>,
     map: Keymap,
     max_layer: u8,
@@ -115,6 +115,8 @@ impl HidBoardClient {
         let keys: Vec<(u8, u8)> = profile.keys.iter().map(|k| (k.row, k.col)).collect();
         let mut client = Self {
             api,
+            vid: profile.vid,
+            pid: profile.pid,
             device: None,
             map: Keymap::empty(
                 (profile.max_layer_inclusive as usize) + 1,
@@ -138,13 +140,19 @@ impl HidBoardClient {
             .api
             .device_list()
             .find(|d| {
-                d.vendor_id() == VID
-                    && d.product_id() == PID
+                d.vendor_id() == self.vid
+                    && d.product_id() == self.pid
                     && d.usage_page() == USAGE_PAGE
                     && d.usage() == USAGE
             })
             .map(|d| d.path().to_owned())
-            .ok_or_else(|| anyhow!("omakeys raw HID not found (5254:0008 usage FF60/61)"))?;
+            .ok_or_else(|| {
+                anyhow!(
+                    "omakeys raw HID not found ({:04x}:{:04x} usage FF60/61)",
+                    self.vid,
+                    self.pid
+                )
+            })?;
 
         let device = self.api.open_path(&path).context("open hidraw")?;
         device.set_blocking_mode(false).context("nonblocking")?;

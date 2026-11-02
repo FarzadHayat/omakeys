@@ -1,0 +1,8 @@
+{
+    "module_name": "Omakeys Notify",
+    "maintainer": "FarzadHayat",
+    "license": "GPL-3.0-only",
+    "features": {
+        "raw": true
+    }
+}

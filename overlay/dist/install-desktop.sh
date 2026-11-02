@@ -4,20 +4,25 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-REPO_ROOT="$(cd "$ROOT/.." && pwd)"
 
 DO_BUILD=1
 DO_UDEV=1
+DO_UNINSTALL=0
+DO_PURGE=0
 for arg in "$@"; do
   case "$arg" in
+    --uninstall) DO_UNINSTALL=1 ;;
+    --purge) DO_PURGE=1 ;;
     --skip-build) DO_BUILD=0 ;;
     --no-udev) DO_UDEV=0 ;;
     -h|--help)
       cat <<EOF
-usage: $(basename "$0") [--skip-build] [--no-udev]
+usage: $(basename "$0") [--skip-build] [--no-udev] [--uninstall [--purge]]
 
   --skip-build  do not run cargo install
   --no-udev     do not install the board hidraw udev rule (needs sudo)
+  --uninstall   remove the service, launcher, icons, bar plugin, udev rule and binary
+  --purge       with --uninstall, also delete ~/.config/omakeys (your settings and boards)
 EOF
       exit 0
       ;;
@@ -38,6 +43,51 @@ ICON_SYM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/icons/hicolor/symbolic/apps"
 PLUGIN_DST="${XDG_CONFIG_HOME:-$HOME/.config}/omarchy/plugins/omakeys"
 SHELL_JSON="${XDG_CONFIG_HOME:-$HOME/.config}/omarchy/shell.json"
 UNIT_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/systemd/user"
+
+if [[ "$DO_UNINSTALL" == 1 ]]; then
+  systemctl --user disable --now omakeys.service 2>/dev/null || true
+  rm -f "$UNIT_DIR/omakeys.service" "$APP_DIR/omakeys.desktop" \
+    "$ICON_DIR/omakeys.svg" "$ICON_SYM_DIR/omakeys-symbolic.svg"
+  rm -rf "$PLUGIN_DST"
+  if [[ -f "$SHELL_JSON" ]]; then
+    SHELL_JSON="$SHELL_JSON" python3 - <<'PY'
+import json, os
+path = os.environ["SHELL_JSON"]
+with open(path, encoding="utf-8") as f:
+    data = json.load(f)
+right = data.get("bar", {}).get("layout", {}).get("right")
+if isinstance(right, list):
+    data["bar"]["layout"]["right"] = [
+        e for e in right if (e.get("id") if isinstance(e, dict) else e) != "omakeys"
+    ]
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+        f.write("\n")
+PY
+  fi
+  command -v omarchy-shell >/dev/null 2>&1 && omarchy-shell -q shell rescanPlugins || true
+  if [[ "$DO_UDEV" == 1 ]]; then
+    sudo rm -f /etc/udev/rules.d/50-omakeys.rules
+    sudo udevadm control --reload-rules
+  fi
+  # PATH may lack ~/.cargo/bin (e.g. under systemd or Hyprland): check it too.
+  OLD_BIN="$(command -v omakeys || true)"
+  if [[ -z "$OLD_BIN" && -x "$HOME/.cargo/bin/omakeys" ]]; then
+    OLD_BIN="$HOME/.cargo/bin/omakeys"
+  fi
+  if [[ -n "$OLD_BIN" ]]; then "$OLD_BIN" quit >/dev/null 2>&1 || true; fi
+  if command -v cargo >/dev/null 2>&1; then cargo uninstall omakeys 2>/dev/null || true; fi
+  rm -f "${XDG_RUNTIME_DIR:-/tmp}/omakeys.sock"
+  if [[ "$DO_PURGE" == 1 ]]; then
+    rm -rf "${XDG_CONFIG_HOME:-$HOME/.config}/omakeys"
+    echo "Removed omakeys and its config."
+  else
+    echo "Removed omakeys. Your settings stay in ~/.config/omakeys (add --purge to delete them)."
+  fi
+  echo "Two things to undo by hand: the 'omakeys toggle' bind in your Hyprland config, and"
+  echo "your input group membership (sudo gpasswd -d $USER input), if nothing else needs it."
+  exit 0
+fi
 
 if [[ "$DO_BUILD" == 1 ]]; then
   if command -v cargo >/dev/null 2>&1; then
@@ -88,6 +138,8 @@ if [[ -d "$PLUGIN_SRC" ]]; then
     mkdir -p "$PLUGIN_DST"
   fi
   cp -a "$PLUGIN_SRC"/. "$PLUGIN_DST/"
+  # The shell may lack the cargo bin dir on PATH: pin the absolute path.
+  sed -i "s|omakeysBin: \"omakeys\"|omakeysBin: \"$BIN\"|" "$PLUGIN_DST/Panel.qml"
   echo "Installed Omarchy plugin: $PLUGIN_DST"
 fi
 
@@ -174,23 +226,33 @@ else
 fi
 
 # Udev rule: lets a normal user open the board's hidraw (live key data).
-UDEV_SRC="$REPO_ROOT/tools/50-omakeys.rules"
+# Generated from the board profiles, so boards added under
+# ~/.config/omakeys/boards are covered: rerun this script after adding one.
 UDEV_DST="/etc/udev/rules.d/50-omakeys.rules"
 if [[ "$DO_UDEV" == 1 ]]; then
-  if [[ -f "$UDEV_DST" ]]; then
-    echo "udev rule already installed: $UDEV_DST"
-  elif [[ ! -f "$UDEV_SRC" ]]; then
-    echo "warning: udev rule missing from checkout: $UDEV_SRC" >&2
-  elif command -v sudo >/dev/null 2>&1; then
+  tmp_rule="$(mktemp)"
+  "$BIN" udev-rules >"$tmp_rule"
+  if command -v sudo >/dev/null 2>&1; then
     echo "Installing udev rule (sudo): $UDEV_DST"
-    sudo install -m 644 "$UDEV_SRC" "$UDEV_DST"
+    sudo install -m 644 "$tmp_rule" "$UDEV_DST"
+    # The rule hands the nodes to the input group, which needs membership.
+    # Members of that group can read all keyboards: see the README.
+    sudo usermod -aG input "$USER"
     sudo udevadm control --reload-rules
-    sudo udevadm trigger
+    sudo udevadm trigger --subsystem-match=hidraw
+    echo "Log out and back in once so the input group applies."
   else
-    echo "warning: install udev rule manually: sudo cp $UDEV_SRC $UDEV_DST" >&2
+    echo "warning: install the udev rule manually:" >&2
+    echo "  omakeys udev-rules | sudo tee $UDEV_DST" >&2
+    echo "  sudo usermod -aG input $USER" >&2
+    echo "  sudo udevadm control --reload-rules && sudo udevadm trigger --subsystem-match=hidraw" >&2
   fi
+  rm -f "$tmp_rule"
 fi
 
+echo "Run 'omakeys doctor' to check the setup."
+echo "Optional toggle key, add to ~/.config/hypr/bindings.lua:"
+echo "  o.bind(\"SUPER + ALT + O\", \"Omakeys overlay\", \"$BIN toggle\")"
 echo "Installed icon: $ICON_DIR/omakeys.svg"
 echo "Installed launcher: $APP_DIR/omakeys.desktop"
 echo "Daemon: systemctl --user status omakeys.service"

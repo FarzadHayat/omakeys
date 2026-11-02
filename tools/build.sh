@@ -2,16 +2,28 @@
 set -euo pipefail
 
 PROJECT="$(cd "$(dirname "$0")/.." && pwd)"
-QMK_HOME="${QMK_FIRMWARE:-$HOME/qmk_firmware}"
+QMK_HOME="${QMK_HOME:-${QMK_FIRMWARE:-$HOME/qmk_firmware}}"
+# qmk CLI resolves the firmware tree from QMK_HOME, so it must be exported.
+export QMK_HOME
 SRC="$PROJECT/keyboard/penk/loremipsum36"
 DEST="$QMK_HOME/keyboards/penk/loremipsum36"
 KM="${1:-default}"
 
+# The bundled ARM toolchain in tools/toolchain is a macOS (Mach-O) build; on
+# Linux use the system one (Arch: pacman -S arm-none-eabi-gcc arm-none-eabi-newlib).
 TOOLBIN="$PROJECT/tools/toolchain/Payload/bin"
-if [ -d "$TOOLBIN" ]; then
+if [ "$(uname -s)" = "Darwin" ] && [ -d "$TOOLBIN" ]; then
     export PATH="$TOOLBIN:$PATH"
 fi
 export PATH="$HOME/.local/bin:$PATH"
+
+need() {
+    command -v "$1" >/dev/null 2>&1 || { echo "build: $1 not found. $2" >&2; exit 1; }
+}
+need qmk "Install the QMK CLI (pipx install qmk, or uv tool install qmk)."
+need rsync "Install rsync."
+need arm-none-eabi-gcc "Install the ARM toolchain (Arch: pacman -S arm-none-eabi-gcc arm-none-eabi-newlib; macOS: see tools/toolchain)."
+[ -d "$QMK_HOME" ] || { echo "build: $QMK_HOME not found. Clone qmk_firmware there or set QMK_FIRMWARE." >&2; exit 1; }
 
 mkdir -p "$(dirname "$DEST")"
 rsync -a --delete "$SRC/" "$DEST/"

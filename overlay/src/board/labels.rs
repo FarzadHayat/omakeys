@@ -5,6 +5,8 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::profile::BoardProfile;
+
 /// How special keys (mods, Enter, Space, …) are labeled on the map.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, Default)]
 #[serde(rename_all = "snake_case")]
@@ -44,38 +46,6 @@ impl KeyLegend {
 /// Omarchy logo (Super / GUI) — needs `omarchy` font at draw time.
 pub const OMARCHY_SUPER: &str = "\u{E900}";
 
-/// Short name for a LoremIpsum36 / rsta layer index (matches firmware enum).
-pub fn layer_name(layer: u8) -> &'static str {
-    match layer {
-        0 => "BASE",
-        1 => "QWE",
-        2 => "SYM",
-        3 => "NAV",
-        4 => "FUN",
-        5 => "ADJ",
-        6 => "GAM",
-        7 => "GMX",
-        8 => "GMY",
-        9 => "FV",
-        10 => "FLIP",
-        11 => "FVNAV",
-        12 => "FVNUM",
-        13 => "FVSYM",
-        _ => "?",
-    }
-}
-
-/// Owned label when a static name is enough, else `L{n}` fallback (unused
-/// indices stay readable).
-pub fn layer_label(layer: u8) -> String {
-    let name = layer_name(layer);
-    if name == "?" {
-        format!("L{layer}")
-    } else {
-        name.to_string()
-    }
-}
-
 fn basic_legend(kc: u8, style: LabelStyle) -> KeyLegend {
     match style {
         LabelStyle::Icons => basic_legend_icons(kc),
@@ -108,12 +78,15 @@ fn basic_legend_icons(kc: u8) -> KeyLegend {
         0x39 => KeyLegend::just("⇪"),
         0x3A..=0x45 => KeyLegend::just(format!("F{}", kc - 0x39)),
         0x46 => KeyLegend::just("⎙"),
+        0x47 => KeyLegend::just("ScrLk"),
+        0x48 => KeyLegend::just("Pause"),
         0x49 => KeyLegend::just("Ins"),
         0x4A => KeyLegend::just("Home"),
         0x4B => KeyLegend::just("⇞"),
         0x4C => KeyLegend::just("⌦"),
         0x4D => KeyLegend::just("End"),
         0x4E => KeyLegend::just("⇟"),
+        0x65 => KeyLegend::just("☰"),
         0x4F => KeyLegend::just("→"),
         0x50 => KeyLegend::just("←"),
         0x51 => KeyLegend::just("↓"),
@@ -139,6 +112,16 @@ fn basic_legend_icons(kc: u8) -> KeyLegend {
         0xE1 | 0xE5 => KeyLegend::just("⇧"),
         0xE2 | 0xE6 => KeyLegend::just("⌥"),
         0xE3 | 0xE7 => KeyLegend::just(OMARCHY_SUPER),
+        0xF1 => KeyLegend::just("A1"),
+        0xF2 => KeyLegend::just("A2"),
+        0xF3 => KeyLegend::just("A3"),
+        0xF4 => KeyLegend::just("⧉"),
+        0xF5 => KeyLegend::just("☰"),
+        0xF6 => KeyLegend::just("⌂"),
+        0xF7 => KeyLegend::just("BT1"),
+        0xF8 => KeyLegend::just("BT2"),
+        0xF9 => KeyLegend::just("BT3"),
+        0xFA => KeyLegend::just("DeX"),
         _ => KeyLegend::just(format!("0x{kc:02X}")),
     }
 }
@@ -153,7 +136,7 @@ fn basic_legend_text(kc: u8) -> KeyLegend {
         0x29 => KeyLegend::just("Esc"),
         0x2A => KeyLegend::just("Bksp"),
         0x2B => KeyLegend::just("Tab"),
-        0x2C => KeyLegend::just("Spc"),
+        0x2C => KeyLegend::just("Space"),
         0x2D => KeyLegend::just("-"),
         0x2E => KeyLegend::just("="),
         0x2F => KeyLegend::just("["),
@@ -168,12 +151,15 @@ fn basic_legend_text(kc: u8) -> KeyLegend {
         0x39 => KeyLegend::just("Caps"),
         0x3A..=0x45 => KeyLegend::just(format!("F{}", kc - 0x39)),
         0x46 => KeyLegend::just("Prt"),
+        0x47 => KeyLegend::just("ScrLk"),
+        0x48 => KeyLegend::just("Pause"),
         0x49 => KeyLegend::just("Ins"),
         0x4A => KeyLegend::just("Home"),
         0x4B => KeyLegend::just("PgUp"),
         0x4C => KeyLegend::just("Del"),
         0x4D => KeyLegend::just("End"),
         0x4E => KeyLegend::just("PgDn"),
+        0x65 => KeyLegend::just("Menu"),
         0x4F => KeyLegend::just("Right"),
         0x50 => KeyLegend::just("Left"),
         0x51 => KeyLegend::just("Down"),
@@ -199,12 +185,22 @@ fn basic_legend_text(kc: u8) -> KeyLegend {
         0xE1 | 0xE5 => KeyLegend::just("Shift"),
         0xE2 | 0xE6 => KeyLegend::just("Alt"),
         0xE3 | 0xE7 => KeyLegend::just("Super"),
+        0xF1 => KeyLegend::just("APP1"),
+        0xF2 => KeyLegend::just("APP2"),
+        0xF3 => KeyLegend::just("APP3"),
+        0xF4 => KeyLegend::just("Task"),
+        0xF5 => KeyLegend::just("Recent"),
+        0xF6 => KeyLegend::just("Home"),
+        0xF7 => KeyLegend::just("BT1"),
+        0xF8 => KeyLegend::just("BT2"),
+        0xF9 => KeyLegend::just("BT3"),
+        0xFA => KeyLegend::just("DeX"),
         _ => KeyLegend::just(format!("0x{kc:02X}")),
     }
 }
 
 fn basic_letter(kc: u8) -> String {
-    char::from(b'A' + (kc - 0x04)).to_string()
+    char::from(b'a' + (kc - 0x04)).to_string()
 }
 
 fn basic_digit(kc: u8) -> String {
@@ -223,7 +219,7 @@ fn basic_digit(kc: u8) -> String {
     }
 }
 
-fn shifted_symbol(basic: u8) -> Option<&'static str> {
+pub(crate) fn shifted_symbol(basic: u8) -> Option<&'static str> {
     Some(match basic {
         0x1E => "!",
         0x1F => "@",
@@ -308,7 +304,7 @@ fn hold_mod_text(mods: u8) -> String {
 }
 
 /// Map a VIA/QMK keycode to a legend with sensible built-in defaults.
-pub fn legend_for_keycode(kc: u16, style: LabelStyle) -> KeyLegend {
+pub fn legend_for_keycode(kc: u16, style: LabelStyle, profile: &BoardProfile) -> KeyLegend {
     match kc {
         0x0000 => KeyLegend::just("·"),
         0x0001 => KeyLegend::just(""),
@@ -345,104 +341,179 @@ pub fn legend_for_keycode(kc: u16, style: LabelStyle) -> KeyLegend {
         0x4000..=0x4FFF => {
             let tap = (kc & 0xFF) as u8;
             let layer = ((kc >> 8) & 0x0F) as u8;
-            KeyLegend::dual(basic_legend(tap, style).primary, layer_label(layer))
+            KeyLegend::dual(
+                basic_legend(tap, style).primary,
+                profile.switch_layer_label(layer),
+            )
         }
 
-        0x5200..=0x521F => KeyLegend::just(format!("TO({})", layer_name((kc - 0x5200) as u8))),
-        0x5220..=0x523F => KeyLegend::just(layer_label((kc - 0x5220) as u8)),
-        0x5240..=0x525F => KeyLegend::just(format!("TG({})", layer_name((kc - 0x5240) as u8))),
+        0x5200..=0x521F => KeyLegend::just(format!(
+            "TO({})",
+            profile.switch_layer_label((kc - 0x5200) as u8)
+        )),
+        0x5220..=0x523F => KeyLegend::just(profile.switch_layer_label((kc - 0x5220) as u8)),
+        0x5240..=0x525F => KeyLegend::just(format!(
+            "DF({})",
+            profile.switch_layer_label((kc - 0x5240) as u8)
+        )),
+        0x5260..=0x527F => KeyLegend::just(profile.switch_layer_label((kc - 0x5260) as u8)),
+        0x5280..=0x529F => KeyLegend::just(profile.switch_layer_label((kc - 0x5280) as u8)),
 
         0x7C00 => KeyLegend::just("BOOT"),
         0x7C03 => KeyLegend::just("CLR"),
         0x7842 => KeyLegend::just("RGB"),
         0x7843 => KeyLegend::just("RGB+"),
         0x7844 => KeyLegend::just("RGB-"),
-        0x7E01 => KeyLegend::just(match style {
-            LabelStyle::Icons => "🔇",
-            LabelStyle::Text => "Mute",
-        }),
-        0x7E02 => KeyLegend::just(match style {
-            LabelStyle::Icons => "📷",
-            LabelStyle::Text => "Shot",
-        }),
+        0x7E00..=0x7E0B if profile.custom_keycodes => {
+            let (icon, text) = match kc {
+                0x7E00 => ("🔇", "Mute"),
+                0x7E01 => ("✋", "Hand"),
+                0x7E02 => ("📷", "Shot"),
+                0x7E03 => ("🎮", "GAME"),
+                0x7E04 => ("🚫", "GAME OFF"),
+                0x7E05 => ("🖐", "1H"),
+                0x7E06 => ("🚫", "1H OFF"),
+                0x7E07 => ("⇧", "1H Shift"),
+                0x7E08 => ("⌃", "1H Ctrl"),
+                0x7E09 => (OMARCHY_SUPER, "1H Cmd"),
+                0x7E0A => ("⌥", "1H Opt"),
+                _ => ("⇧", "OS Shift"),
+            };
+            KeyLegend::just(match style {
+                LabelStyle::Icons => icon,
+                LabelStyle::Text => text,
+            })
+        }
 
         _ => KeyLegend::just(format!("0x{kc:04X}")),
-    }
-}
-
-/// Back-compat helper for tests / simple call sites (icon style).
-pub fn label_for_keycode(kc: u16) -> String {
-    let leg = legend_for_keycode(kc, LabelStyle::Icons);
-    match leg.hold {
-        Some(h) => format!("{}/{}", leg.primary, h),
-        None => leg.primary,
     }
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::board::profile::loremipsum36;
 
     #[test]
     fn layer_names_match_firmware() {
-        assert_eq!(layer_name(0), "BASE");
-        assert_eq!(layer_name(2), "SYM");
-        assert_eq!(layer_name(3), "NAV");
-        assert_eq!(layer_label(6), "GAM");
-        assert_eq!(legend_for_keycode(0x5222, LabelStyle::Icons).primary, "SYM");
-        assert_eq!(legend_for_keycode(0x5201, LabelStyle::Icons).primary, "TO(QWE)");
-        assert_eq!(legend_for_keycode(0x5241, LabelStyle::Icons).primary, "TG(QWE)");
+        let p = loremipsum36();
+        assert_eq!(p.layer_label(0), "BASE");
+        assert_eq!(p.layer_label(2), "SYM");
+        assert_eq!(p.layer_label(3), "NAV");
+        assert_eq!(p.layer_label(6), "GAME");
+        assert_eq!(
+            legend_for_keycode(0x5222, LabelStyle::Icons, &loremipsum36()).primary,
+            "SYM"
+        );
+        assert_eq!(
+            legend_for_keycode(0x5201, LabelStyle::Icons, &loremipsum36()).primary,
+            "TO(QWERTY)"
+        );
+        assert_eq!(
+            legend_for_keycode(0x5241, LabelStyle::Icons, &loremipsum36()).primary,
+            "DF(QWERTY)"
+        );
+        assert_eq!(
+            legend_for_keycode(0x5261, LabelStyle::Icons, &loremipsum36()).primary,
+            "QWERTY"
+        );
+        assert_eq!(
+            legend_for_keycode(0x528A, LabelStyle::Icons, &loremipsum36()).primary,
+            "FLIP"
+        );
+        assert_eq!(p.layer_label(9), "ONE HAND");
+        assert_eq!(p.layer_label(11), "ONE HAND NAV");
     }
 
     #[test]
     fn mod_tap_dual_icons() {
-        let leg = legend_for_keycode(0x2114, LabelStyle::Icons);
-        assert_eq!(leg.primary, "Q");
+        let leg = legend_for_keycode(0x2114, LabelStyle::Icons, &loremipsum36());
+        assert_eq!(leg.primary, "q");
         assert_eq!(leg.hold.as_deref(), Some("⌃"));
-        let ent = legend_for_keycode(0x2128, LabelStyle::Icons);
+        let ent = legend_for_keycode(0x2128, LabelStyle::Icons, &loremipsum36());
         assert_eq!(ent.primary, "⏎");
         assert_eq!(ent.hold.as_deref(), Some("⌃"));
     }
 
     #[test]
     fn mod_tap_dual_text() {
-        let leg = legend_for_keycode(0x2114, LabelStyle::Text);
-        assert_eq!(leg.primary, "Q");
+        let leg = legend_for_keycode(0x2114, LabelStyle::Text, &loremipsum36());
+        assert_eq!(leg.primary, "q");
         assert_eq!(leg.hold.as_deref(), Some("Ctrl"));
-        let ent = legend_for_keycode(0x2128, LabelStyle::Text);
+        let ent = legend_for_keycode(0x2128, LabelStyle::Text, &loremipsum36());
         assert_eq!(ent.primary, "Enter");
         assert_eq!(ent.hold.as_deref(), Some("Ctrl"));
     }
 
     #[test]
+    fn custom_keycodes_match_firmware_enum() {
+        let icon = |kc| legend_for_keycode(kc, LabelStyle::Icons, &loremipsum36()).primary;
+        let text = |kc| legend_for_keycode(kc, LabelStyle::Text, &loremipsum36()).primary;
+        assert_eq!(icon(0x7E00), "🔇");
+        assert_eq!(text(0x7E00), "Mute");
+        assert_eq!(icon(0x7E01), "✋");
+        assert_eq!(text(0x7E01), "Hand");
+        assert_eq!(icon(0x7E02), "📷");
+        assert_eq!(text(0x7E02), "Shot");
+        assert_eq!(text(0x7E03), "GAME");
+        assert_eq!(text(0x7E05), "1H");
+        assert_eq!(text(0x7E06), "1H OFF");
+        assert_eq!(text(0x7E0B), "OS Shift");
+    }
+
+    #[test]
     fn gui_is_omarchy_super_icons() {
-        let leg = legend_for_keycode(0x00E3, LabelStyle::Icons);
+        let leg = legend_for_keycode(0x00E3, LabelStyle::Icons, &loremipsum36());
         assert_eq!(leg.primary, OMARCHY_SUPER);
     }
 
     #[test]
     fn gui_is_super_text() {
-        let leg = legend_for_keycode(0x00E3, LabelStyle::Text);
+        let leg = legend_for_keycode(0x00E3, LabelStyle::Text, &loremipsum36());
         assert_eq!(leg.primary, "Super");
     }
 
     #[test]
     fn specials_icons() {
-        assert_eq!(legend_for_keycode(0x002C, LabelStyle::Icons).primary, "␣");
-        assert_eq!(legend_for_keycode(0x00E1, LabelStyle::Icons).primary, "⇧");
-        assert_eq!(legend_for_keycode(0x002A, LabelStyle::Icons).primary, "⌫");
+        assert_eq!(
+            legend_for_keycode(0x002C, LabelStyle::Icons, &loremipsum36()).primary,
+            "␣"
+        );
+        assert_eq!(
+            legend_for_keycode(0x00E1, LabelStyle::Icons, &loremipsum36()).primary,
+            "⇧"
+        );
+        assert_eq!(
+            legend_for_keycode(0x002A, LabelStyle::Icons, &loremipsum36()).primary,
+            "⌫"
+        );
     }
 
     #[test]
     fn specials_text() {
-        assert_eq!(legend_for_keycode(0x002C, LabelStyle::Text).primary, "Spc");
-        assert_eq!(legend_for_keycode(0x00E1, LabelStyle::Text).primary, "Shift");
-        assert_eq!(legend_for_keycode(0x002A, LabelStyle::Text).primary, "Bksp");
+        assert_eq!(
+            legend_for_keycode(0x002C, LabelStyle::Text, &loremipsum36()).primary,
+            "Space"
+        );
+        assert_eq!(
+            legend_for_keycode(0x00E1, LabelStyle::Text, &loremipsum36()).primary,
+            "Shift"
+        );
+        assert_eq!(
+            legend_for_keycode(0x002A, LabelStyle::Text, &loremipsum36()).primary,
+            "Bksp"
+        );
     }
 
     #[test]
     fn shifted_symbols() {
-        assert_eq!(legend_for_keycode(0x021E, LabelStyle::Icons).primary, "!");
-        assert_eq!(legend_for_keycode(0x021E, LabelStyle::Text).primary, "!");
+        assert_eq!(
+            legend_for_keycode(0x021E, LabelStyle::Icons, &loremipsum36()).primary,
+            "!"
+        );
+        assert_eq!(
+            legend_for_keycode(0x021E, LabelStyle::Text, &loremipsum36()).primary,
+            "!"
+        );
     }
 }

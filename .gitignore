@@ -10,3 +10,4 @@ tools/toolchain/
 docs/superpowers/plans/
 docs/superpowers/specs/
 .opencode/plans/
+.cursor/
