@@ -59,6 +59,10 @@ overlays and VIA share Raw HID.
   [releases page](https://github.com/FarzadHayat/omakeys/releases)
 - `./tools/build.sh starter` builds the same firmware into `firmware/`
 
+## Support
+
+If this saves you time, please [sponsor me on GitHub](https://github.com/sponsors/FarzadHayat). It keeps these projects maintained and free.
+
 ## License
 
 GPL-3.0. Starter firmware vendors and links the layer-notify modules, which
